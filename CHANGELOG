@@ -1,3 +1,24 @@
+Version 9.7 - Jan 13th, 2026
+============================
+
+- The Canonical Cache Representation underwent a breaking change after the
+  adoption of https://datatracker.ietf.org/doc/draft-ietf-sidrops-rpki-ccr/
+  as a SIDROPS working group item. Apart from several CMS-related cosmetics,
+  it now uses a IANA-assigned content type. As a result, rpki-client 9.7
+  cannot parse rpki-client 9.6's .ccr files and vice versa.
+
+- Support for Ghostbusters Record objects (RFC 6493) has been removed.
+  Nobody showed interest in deploying this and there are other, widely
+  supported ways of exchanging operational contact information such as
+  RDAP. RFC 6493 is undergoing a status review to be marked as historic:
+  https://datatracker.ietf.org/doc/status-change-rpki-ghostbusters-record-to-historic/
+
+- Prepare the code base for the opaque ASN1_STRING structure in OpenSSL 4.
+
+- Fixed two reliability issues: one where a malicious RPKI Certification
+  Authority can trigger a crash, one where malicious Trust Anchor can
+  provoke memory exhaustion. Thanks to Xie Yifan for reporting.
+
 Version 9.6 - Sep 22nd, 2025
 ============================
 
