@@ -1,4 +1,4 @@
-From 4c6bae3f37fd0589ceb794bdad042d112ce25655 Mon Sep 17 00:00:00 2001
+From af56a8a9a494b13e624b647aa1a62ff133a88e80 Mon Sep 17 00:00:00 2001
 From: Claudio Jeker <claudio@openbsd.org>
 Date: Mon, 20 Apr 2020 12:16:46 +0200
 Subject: [PATCH 2/4] Apply placeholders for portability shim
@@ -9,7 +9,7 @@ From Robert Scheck
  1 file changed, 14 insertions(+), 14 deletions(-)
 
 diff --git src/usr.sbin/rpki-client/rpki-client.8 src/usr.sbin/rpki-client/rpki-client.8
-index c6fde7865..65435362b 100644
+index 8cd9681d7..7cda9afc1 100644
 --- src/usr.sbin/rpki-client/rpki-client.8
 +++ src/usr.sbin/rpki-client/rpki-client.8
 @@ -46,7 +46,7 @@ The
@@ -36,7 +36,7 @@ index c6fde7865..65435362b 100644
  to fetch repositories.
  It must accept the
  .Fl rt
-@@ -199,7 +199,7 @@ The skip filter is enforced during processing of the
+@@ -200,7 +200,7 @@ The skip filter is enforced during processing of the
  .Em Subject Information Access Pq SIA
  extension in CA certificates, thus applies to both RSYNC and RRDP connections.
  By default load entries from
@@ -45,7 +45,7 @@ index c6fde7865..65435362b 100644
  .It Fl s Ar timeout
  Terminate after
  .Ar timeout
-@@ -219,7 +219,7 @@ This option can be used multiple times to load multiple TALs.
+@@ -220,7 +220,7 @@ This option can be used multiple times to load multiple TALs.
  By default
  .Nm
  will load all TAL files in
@@ -54,7 +54,7 @@ index c6fde7865..65435362b 100644
  TAL are small files containing a public key and URL endpoint address.
  .It Fl V
  Show the version and exit.
-@@ -240,7 +240,7 @@ The directory where
+@@ -241,7 +241,7 @@ The directory where
  .Nm
  will write the output files.
  Defaults to
@@ -63,7 +63,7 @@ index c6fde7865..65435362b 100644
  .El
  .Pp
  By default
-@@ -302,32 +302,32 @@ utilizes the following environment variables:
+@@ -304,32 +304,32 @@ utilizes the following environment variables:
  URL of HTTP proxy to use.
  .El
  .Sh FILES
@@ -105,5 +105,5 @@ index c6fde7865..65435362b 100644
  .Sh STANDARDS
  .Rs
 -- 
-2.50.1
+2.52.0
 
