@@ -1,3 +1,49 @@
+Version 9.9 - Aug 22nd, 2026
+============================
+
+- Introduce a backoff retry mechanism for non-functional CAs, eventually
+  settling on retrying broken CAs only once per day. Backoff helps reduce
+  load on both the RP itself and the publication points. It reduces log
+  clutter and improves RP run duration.
+
+- Support for OpenSSL 4.
+
+- Add additional fail safe: only output config files on successful run.
+
+- In Rsync mode, include .gbr files in transfer for backwards compatibility.
+
+- Exclude hidden files and directories ('/.*') when synchronizing via Rsync.
+  From a report by Ben Cartwright-Cox.
+
+- Limit the length of filenames as they appear in various ASN.1 fields
+  to 255.
+
+- Improve readability by printing CCR ManifestState sorted by AKI.
+
+- Improve warnings related to malformed CCRs.
+
+- Limit the range of deltas added to the queue. Reported by Xin Wang.
+
+- Rework error handling in rrdp_handle_file. Reported by Xin Wang.
+
+- Ensure consistent states in persistent HTTP connections.
+  Reported by Xin Wang.
+
+- Tighten well-formedness checks on AIA & SIA extensions in certs.
+  Reported by Ties de Kock.
+
+- Clear last_modified after each response on a persistent HTTP connection.
+  Reported by Ties de Kock.
+
+- ASPAs with too many providers are no longer included in CCR output.
+  Reported by Ties de Kock.
+
+- Replace assert() with a graceful failure by aborting the http request.
+  Reported by Frank Denis.
+
+- Fix a off-by-one in the internal IP address overlap checker.
+  Reported by Frank Denis.
+
 Version 9.8 - Apr 14th, 2026
 ============================
 
