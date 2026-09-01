@@ -1,7 +1,7 @@
 1. Prerequisites
 ----------------
 
-You will need the following dependencies:
+The following dependencies are required:
  - libcrypto: LibreSSL (3.6.0 or newer) or OpenSSL (1.1.1w or newer).
  - libtls: LibreSSL or libretls
  - libexpat
