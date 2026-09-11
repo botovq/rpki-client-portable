@@ -470,7 +470,11 @@ AC_CHECK_FUNCS([tls_default_ca_cert_file tls_config_set_ca_mem], [], [AC_MSG_ERR
 # these are present in that library
 AC_CHECK_FUNCS([ASN1_BIT_STRING_get_length ASN1_BIT_STRING_set1])
 AC_CHECK_FUNCS([CMS_get_version X509_get0_uids X509_CRL_get0_tbs_sigalg])
-# available since OpenSSL 4 and LibreSSL 4.4
+AC_CHECK_FUNCS([IPAddrBlocks_new IPAddrBlocks_free])
+# available since OpenSSL 4.1
+AM_CONDITIONAL([HAVE_IPADDRBLOCKS_NEW], [test "x$ac_cv_func_IPAddrBlocks_new" = xyes])
+AM_CONDITIONAL([HAVE_IPADDRBLOCKS_FREE], [test "x$ac_cv_func_IPAddrBlocks_free" = xyes])
+# available since OpenSSL 4 and LibreSSL 4.x?
 AM_CONDITIONAL([HAVE_ASN1_BIT_STRING_GET_LENGTH], [test "x$ac_cv_func_ASN1_BIT_STRING_get_length" = xyes])
 AM_CONDITIONAL([HAVE_ASN1_BIT_STRING_SET1], [test "x$ac_cv_func_ASN1_BIT_STRING_set1" = xyes])
 # available since LibreSSL 3.8.1
